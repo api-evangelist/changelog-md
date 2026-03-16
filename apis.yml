@@ -1,14 +1,29 @@
+aid: changelog-md
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/changelog-md/refs/heads/main/apis.yml
 name: CHANGELOG.md
-description: Document tracking notable changes between project versions, following
-  conventions like Keep a Changelog. Lists additions, fixes, deprecations, and breaking
-  changes.
-url: ''
 tags:
-- Documentation
-- Versioning
-- Release Management
-- Change Tracking
-created: '2025'
-modified: '2025'
+  - Documentation
+  - Versioning
+  - Release Management
+  - Change Tracking
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2025-01-01'
+modified: '2026-03-16'
+position: Consumer
+description: >-
+  CHANGELOG.md is a document tracking notable changes between project versions,
+  following conventions like Keep a Changelog. Lists additions, fixes,
+  deprecations, and breaking changes.
 apis: []
-common: []
+common:
+  - type: Website
+    url: https://keepachangelog.com/
+  - type: Documentation
+    url: https://keepachangelog.com/en/1.0.0/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+specificationVersion: '0.19'
