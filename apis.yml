@@ -3,10 +3,10 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/changelog-md/refs/heads/main/apis.yml
 name: CHANGELOG.md
 tags:
-  - Documentation
-  - Versioning
-  - Release Management
   - Change Tracking
+  - Documentation
+  - Release Management
+  - Versioning
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
