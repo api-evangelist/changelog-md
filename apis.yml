@@ -2,7 +2,7 @@ aid: changelog-md
 url: >-
   https://raw.githubusercontent.com/api-evangelist/changelog-md/refs/heads/main/apis.yml
 name: CHANGELOG.md (Keep a Changelog)
-x-type: standard
+kind: standard
 tags:
   - Change Log
   - Change Tracking
