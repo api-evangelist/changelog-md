@@ -31,6 +31,8 @@ description: >-
   readable by humans and parseable by tooling.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/changelog-md-domain-security.yml
   - type: Website
     url: https://keepachangelog.com/
   - type: Specification
