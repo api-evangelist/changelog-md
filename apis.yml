@@ -42,6 +42,14 @@ description: >-
   readable by humans and parseable by tooling.
 apis: []
 common:
+  - type: IssueTracker
+    url: https://github.com/olivierlacan/keep-a-changelog/issues
+  - type: Releases
+    url: https://github.com/olivierlacan/keep-a-changelog/releases
+  - type: CodeOfConduct
+    url: https://github.com/olivierlacan/keep-a-changelog/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/olivierlacan/keep-a-changelog/blob/main/CONTRIBUTING.md
   - type: DomainSecurity
     url: security/changelog-md-domain-security.yml
   - type: Website
