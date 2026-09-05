@@ -1,0 +1,122 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://keepachangelog.com/ (version navigation),
+  https://keepachangelog.com/en/2.0.0/,
+  https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md, and direct
+  HTTP probes of every published version URL on 2026-09-05.
+note: >-
+  The subject of this lifecycle is a SPECIFICATION, not an API. There is no runtime to
+  deprecate, no Sunset or Deprecation response header to send, and no SLA — those fields
+  are n/a rather than absent. What the project does operate is a version-preservation
+  policy for the specification text itself, which is unusually clean and is recorded here.
+
+versioning:
+  scheme: semver
+  policy_url: https://keepachangelog.com/en/2.0.0/
+  current_version: 2.0.0
+  current_released: '2026-06-07'
+  url_pattern: https://keepachangelog.com/{lang}/{version}/
+  navigation: >-
+    Every version page carries a version selector to the other published versions and a
+    language selector across 28 translations.
+  published_versions:
+    - version: 2.0.0
+      url: https://keepachangelog.com/en/2.0.0/
+      status: current
+      released: '2026-06-07'
+      http_status: 200
+    - version: 1.1.0
+      url: https://keepachangelog.com/en/1.1.0/
+      status: superseded
+      released: '2019-02-15'
+      http_status: 200
+    - version: 1.0.0
+      url: https://keepachangelog.com/en/1.0.0/
+      status: superseded
+      released: '2017-06-20'
+      http_status: 200
+    - version: 0.3.0
+      url: https://keepachangelog.com/en/0.3.0/
+      status: superseded
+      released: '2015-12-03'
+      http_status: 200
+    - version: 0.0.1
+      url: https://keepachangelog.com/en/0.0.1/
+      status: not-published-as-a-page
+      released: '2014-05-31'
+      http_status: 404
+      note: >-
+        The 0.0.x line appears in CHANGELOG.md but has no version page; 0.3.0 is the
+        oldest URL that resolves. Probed directly on 2026-09-05.
+
+version_preservation:
+  policy: superseded-versions-stay-live
+  verified: probed
+  detail: >-
+    Every superseded specification version remains served at its own stable URL, and the
+    2.0.0 release notes state the intent explicitly where the guidance changed —
+    "Earlier versions keep the original." Probed 2026-09-05: 1.1.0, 1.0.0 and 0.3.0 all
+    return 200. A project that pinned its changelog preamble to
+    https://keepachangelog.com/en/1.0.0/ nine years ago still resolves today.
+  known_breakage:
+    - detail: >-
+        2.0.0 restructured the page from a flat FAQ into integrated guidance, so some
+        section ANCHORS that older links pointed at no longer resolve WITHIN the 2.0.0
+        page. The versioned pages that contain those anchors are still served, so a link
+        that named its version is unaffected; a link to a bare /en/ anchor is.
+      source: https://keepachangelog.com/en/2.0.0/
+
+breaking_change_policy:
+  stated: true
+  source: https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md
+  detail: >-
+    Breaking changes are marked inline in the project's own changelog with a bold
+    **Breaking:** prefix, and the 2.0.0 entry opens with a plain-language statement of
+    blast radius — "It breaks the guidance, not the format ... so your existing changelog
+    stays valid." Three entries carry the Breaking marker.
+  migration_guidance: >-
+    2.0.0 added guidance on "adopting a newer version of the format without rewriting
+    history", which is the migration path from 1.x.
+
+deprecation:
+  policy_published: false
+  sunset_header: na
+  deprecation_header: na
+  detail: >-
+    No deprecation or sunset policy is published, and none is applicable — no version of
+    the specification has ever been withdrawn. Deprecation exists inside the format (one
+    of the six change types is "Deprecated") but that is vocabulary the format offers its
+    users, not a policy the project applies to itself. No Deprecation pointer is wired
+    into apis.yml.
+
+status_page:
+  published: false
+  detail: >-
+    No status page exists and none is expected: the site is static HTML built once and
+    served from GitHub Pages (stated in the project's AGENTS.md), so its availability is
+    GitHub Pages' availability. No StatusPage pointer is wired into apis.yml.
+
+sla:
+  published: false
+  detail: MIT-licensed volunteer open source; no service-level commitment is offered.
+
+support_channels:
+  - type: IssueTracker
+    url: https://github.com/olivierlacan/keep-a-changelog/issues
+    status: 200
+  - type: Discussions
+    url: https://github.com/olivierlacan/keep-a-changelog/discussions
+    status: 200
+
+maintainership:
+  model: single-maintainer-plus-contributors
+  maintainer: Olivier Lacan
+  source: https://github.com/olivierlacan/keep-a-changelog/blob/main/AGENTS.md
+  detail: >-
+    Self-described in AGENTS.md: "The project has one maintainer, myriad contributors,
+    and an oversized impact on how software changes are communicated around the world."
+    A bus-factor of one is the material lifecycle risk for a convention this widely
+    depended on; the mitigation on record is that the specification text is MIT-licensed
+    and fully mirrored in a public Git repository.
+  last_repository_activity: '2026-09-04'

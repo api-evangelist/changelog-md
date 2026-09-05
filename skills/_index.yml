@@ -1,0 +1,38 @@
+generated: '2026-09-05'
+method: searched
+source: https://github.com/olivierlacan/keep-a-changelog/blob/main/AGENTS.md
+note: >-
+  Provider-published, saved VERBATIM. Keep a Changelog ships an AGENTS.md at the root of
+  its own repository — the project practices the automation guidance its 2.0.0 spec
+  added ("LLM-drafted changelogs with a brief for an AGENTS.md"). Nothing here is
+  authored by API Evangelist.
+scope_caveat: >-
+  IMPORTANT — this AGENTS.md is a CONTRIBUTOR brief, not an API-consumption skill. Keep a
+  Changelog publishes no API, so there are no operationIds to ground a task skill in.
+  The document tells an agent working ON the project what the project's principles are
+  (no backend, Ruby/Rake CLI workflows, translations are first-class) and the strict
+  limits on how LLMs may be used (never to replace translators, never to decide what the
+  guidelines say). Read it before proposing a change to the specification or the site.
+skills:
+  - name: working-on-keep-a-changelog
+    file: changelog-md-agents.md
+    kind: AGENTS.md
+    audience: contributor
+    method: searched
+    source: https://raw.githubusercontent.com/olivierlacan/keep-a-changelog/main/AGENTS.md
+    fetched: '2026-09-05'
+    http_status: 200
+    bytes: 5011
+    description: >-
+      The project's own brief for humans and agents contributing to Keep a Changelog:
+      what the project is, its technical principles, how it does and does not use LLMs,
+      and the tone-and-voice contract for anything written into the site.
+    sections:
+      - What this project is
+      - Technical principles
+      - How we use LLMs
+      - Writing and content
+    references:
+      - https://github.com/olivierlacan/keep-a-changelog/blob/main/CONTRIBUTING.md
+      - https://github.com/olivierlacan/keep-a-changelog/blob/main/CODE_OF_CONDUCT.md
+      - docs/tone-and-voice.md (in the project repository)

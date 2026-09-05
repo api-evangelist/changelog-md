@@ -1,0 +1,89 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://keepachangelog.com/en/2.0.0/ and
+  https://github.com/olivierlacan/keep-a-changelog/blob/main/AGENTS.md
+note: >-
+  There is no API here, so the runtime-semantics dimensions this artifact normally
+  measures have no subject. They are recorded as `na` with the reason, not as zero: Keep
+  a Changelog is a static, MIT-licensed specification served from GitHub Pages, with —
+  in the project's own words — "No backend. The site is static HTML, built once and
+  served from GitHub Pages." What this file does capture is the FORMAT's own conventions,
+  which are the thing a machine actually parses here.
+
+api_surface: none
+api_surface_evidence:
+  - url: https://keepachangelog.com/openapi.json
+    status: 404
+  - url: https://keepachangelog.com/.well-known/api-catalog
+    status: 404
+
+auth_style: na
+pagination: na
+field_expansion: na
+metadata: na
+request_id_tracing: na
+error_envelope: na
+rate_limit_signaling: na
+dry_run_mode: na
+
+idempotency:
+  coverage: na
+  reason: no-write-surface
+  detail: >-
+    No API, therefore no mutating operations and nothing to replay-protect. Reading a
+    specification page is idempotent by construction.
+
+reversibility:
+  grade: na
+  reason: no-write-surface
+  detail: >-
+    No write surface exists, so there is no action for an agent to take back. The nearest
+    analogue is editorial and it is documented: superseded specification versions are
+    never withdrawn — 1.1.0, 1.0.0 and 0.3.0 all still return 200 — and the 2.0.0 release
+    states "Earlier versions keep the original", so a project that pinned an older
+    version can stay on it indefinitely. See lifecycle/changelog-md-lifecycle.yml.
+
+versioning:
+  scheme: semver
+  surface: URL path — https://keepachangelog.com/{lang}/{version}/
+  current: 2.0.0
+  detail: See lifecycle/changelog-md-lifecycle.yml for the full version table and probe results.
+
+format_conventions:
+  file: CHANGELOG.md at the project root
+  header: '# Changelog, followed by a short preamble naming the format and the versioning scheme'
+  release_heading: '## [<version>] - YYYY-MM-DD'
+  order: reverse chronological, newest first
+  unreleased_section: '## [Unreleased] at the top of the file'
+  change_type_heading: '### <type>'
+  change_types:
+    - Added
+    - Changed
+    - Deprecated
+    - Removed
+    - Fixed
+    - Security
+  change_types_closed: true
+  change_types_closed_evidence: >-
+    2.0.0 added a documented rationale for "why the six change types don't grow", plus a
+    recommended order for them.
+  date_format: YYYY-MM-DD
+  yanked_marker: '[YANKED]'
+  compare_links: >-
+    2.0.0 recommends linking each version to a compare diff using Markdown reference
+    links at the foot of the file.
+  breaking_changes: >-
+    2.0.0 added guidance on marking breaking changes and on where upgrade steps belong.
+    The project marks its own with a bold **Breaking:** prefix on the entry.
+  security_entries: >-
+    2.0.0 recommends leading a Security entry with its CVE and pointing to the full
+    advisory.
+
+cross_links:
+  errors: null
+  lifecycle: lifecycle/changelog-md-lifecycle.yml
+  authentication: null
+  rate_limits: null
+  conformance: conformance/changelog-md-conformance.yml
+  changelog: changelog/changelog-md-changelog.yml

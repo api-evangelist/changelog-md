@@ -1,0 +1,116 @@
+generated: '2026-09-05'
+method: searched
+source: https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md
+note: >-
+  Keep a Changelog keeps its own changelog in the format it defines — the project's
+  CHANGELOG.md is simultaneously the release history of the specification and the
+  canonical worked example of the convention, and the spec page renders it inline as
+  the example changelog. Read verbatim from the raw file on the main branch and
+  cross-checked against the rendered spec page at https://keepachangelog.com/en/2.0.0/.
+
+subject: The Keep a Changelog specification and the keepachangelog.com site
+format: Keep a Changelog (self-hosted, the project's own convention)
+scheme: semver
+scheme_source: https://semver.org/spec/v2.0.0.html
+current_version: 2.0.0
+current_version_released: '2026-06-07'
+current_version_url: https://keepachangelog.com/en/2.0.0/
+unreleased_section: true
+change_types:
+  - Added
+  - Changed
+  - Deprecated
+  - Removed
+  - Fixed
+  - Security
+date_format: YYYY-MM-DD (ISO 8601)
+yanked_marker: '[YANKED]'
+feed: none
+feed_note: >-
+  No RSS/Atom or JSON feed of releases is published. The machine-readable surfaces are
+  the raw CHANGELOG.md on the main branch and the GitHub Releases API for the repo.
+machine_readable:
+  - https://raw.githubusercontent.com/olivierlacan/keep-a-changelog/main/CHANGELOG.md
+  - https://api.github.com/repos/olivierlacan/keep-a-changelog/releases
+
+entries:
+  - version: Unreleased
+    date: null
+    breaking: false
+    highlights:
+      - >-
+        Older spec pages no longer display an example changelog written to newer
+        conventions than the page describes; each page's example is pinned to its own
+        version's last release, derived at build time from CHANGELOG.md.
+    counts:
+      fixed: 1
+
+  - version: 2.0.0
+    date: '2026-06-07'
+    url: https://keepachangelog.com/en/2.0.0/
+    breaking: true
+    summary: >-
+      First major revision of Keep a Changelog. It breaks the guidance, not the format —
+      the six change types, YYYY-MM-DD dates, and the Unreleased and [YANKED] markers are
+      unchanged, so an existing changelog stays valid. What breaks is the surface around
+      it: the page is restructured so some older section anchors no longer resolve, the
+      recommended guidance has shifted, and existing translations lag until they catch up.
+    breaking_changes:
+      - Retired the tagline "Don't let your friends dump git logs into changelogs" for "Clearly document the evolution of your projects"; earlier versions keep the original.
+      - Restructured the page from a flat FAQ into integrated guidance in a plainer, less first-person voice; some older section links no longer resolve.
+      - Removed the FAQ scaffolding and most first-person framing, whose section anchors no longer resolve; the podcast note moved to the References section.
+    highlights:
+      - New format guidance — the '# Changelog' header preamble, adopting a newer version of the format without rewriting history, marking breaking changes and where upgrade steps belong, choosing between Changed/Fixed/Security, leading a Security entry with its CVE, and why the six change types do not grow.
+      - New versioning guidance — schemes beyond SemVer, and linking each version to a compare diff with reference links.
+      - New guidance on changelogs vs. release notes, including why a host's generated notes are vendor lock-in.
+      - New automation guidance — LLM-drafted changelogs with a brief for an AGENTS.md, Conventional Commits, CI/CD, linking issues and pull requests, crediting contributors.
+      - New guidance for scale — very large changelogs and monorepos.
+      - Redesigned, accessible site (WCAG 2.1 AA) with light and dark themes.
+      - Removed outdated specifics — the Vandamme gem reference and a GitHub-Releases discoverability note.
+    counts:
+      added: 3
+      changed: 4
+      removed: 2
+
+  - version: 1.1.2
+    date: '2024-09-27'
+    breaking: false
+    highlights:
+      - Fifteen v1.1 translations added (German, Italian, Simplified Chinese, Persian, Polish, Slovenian, Traditional Chinese, Spanish, Brazilian Portuguese, Czech, Romanian, Swedish, Ukrainian, Korean, Indonesian).
+      - French and Dutch translations improved.
+    counts:
+      added: 15
+      fixed: 2
+
+  - version: 1.1.1
+    date: '2023-03-05'
+    breaking: false
+    highlights:
+      - Seven more v1.1 translations (Arabic, French, Dutch, Russian, Japanese, Norwegian Bokmal, Turkish).
+      - Pages default to the most recent version available for each language, and the site displays a count of available translations.
+      - All links centralized into /data/links.json so they can be updated in one place.
+      - Dependencies upgraded to Ruby 3.2.1 and current Middleman.
+
+  - version: 1.1.0
+    date: '2019-02-15'
+    url: https://keepachangelog.com/en/1.1.0/
+    breaking: false
+    highlights:
+      - Danish and Georgian translations.
+      - Changelog-inconsistency section added to Bad Practices.
+
+  - version: 1.0.0
+    date: '2017-06-20'
+    url: https://keepachangelog.com/en/1.0.0/
+    breaking: false
+    highlights:
+      - New visual identity, version navigation, and links from older versions to the latest release.
+      - Added the "Why keep a changelog?", "Who needs a changelog?" and "How do I make a changelog?" sections, plus the Guiding Principles sub-section.
+      - First wave of community translations (Chinese, German, Italian, Swedish and more).
+
+release_cadence:
+  observed: irregular
+  note: >-
+    Sixteen releases between 2014-05-31 and 2026-06-07. The format stabilised at 1.0.0
+    (2017) and the eight years since have been translations and site work; 2.0.0 (2026)
+    is the first major revision.

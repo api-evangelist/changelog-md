@@ -1,0 +1,31 @@
+generated: '2026-09-05'
+method: searched
+source: https://keepachangelog.com/en/2.0.0/
+note: >-
+  Searched the site and the repository for any pricing, plan, sponsorship tier, donation
+  or commercial-licence page. None exists. Keep a Changelog is a free, MIT-licensed
+  specification maintained by a volunteer and served as static HTML from GitHub Pages;
+  there is no product to price, no account to open, and no paid tier. Recorded as an
+  explicit zero rather than omitted, so the absence is data rather than a gap.
+plan_count: 0
+plans: []
+pricing_model: free
+license: MIT
+license_url: https://github.com/olivierlacan/keep-a-changelog/blob/main/LICENSE
+license_note: >-
+  Corrects a prior record in this repo that pointed the License property at CC BY 4.0.
+  The site footer states "Keep a Changelog is MIT licensed" and the repository LICENSE
+  file is the MIT License, copyright (c) 2014 Olivier Lacan. Verified 2026-09-05.
+enterprise_contact: false
+sponsorship:
+  published: false
+  detail: >-
+    No GitHub Sponsors button, Open Collective page, or donation link was found on the
+    site or in the repository root.
+evidence:
+  - url: https://keepachangelog.com/en/2.0.0/
+    status: 200
+    finding: No pricing, plans, or sponsorship section anywhere on the specification page or in its footer.
+  - url: https://github.com/olivierlacan/keep-a-changelog
+    status: 200
+    finding: MIT licensed; no funding or pricing surface.

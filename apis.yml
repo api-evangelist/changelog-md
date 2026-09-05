@@ -50,7 +50,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/changelog-md.png
 access: Open Source
 created: '2025-01-01'
-modified: '2026-04-23'
+modified: '2026-09-05'
 position: Producing
 description: >-
   CHANGELOG.md is a community convention for a human-readable, Markdown-
@@ -77,19 +77,39 @@ common:
   - type: Website
     url: https://keepachangelog.com/
   - type: Specification
-    url: https://keepachangelog.com/en/1.1.0/
+    url: https://keepachangelog.com/en/2.0.0/
   - type: LegacySpecification
-    url: https://keepachangelog.com/en/1.0.0/
-  - type: Documentation
     url: https://keepachangelog.com/en/1.1.0/
+  - type: Documentation
+    url: https://keepachangelog.com/en/2.0.0/
   - type: GitHubRepository
     url: https://github.com/olivierlacan/keep-a-changelog
+  - type: SourceCode
+    url: https://github.com/olivierlacan/keep-a-changelog
+  - type: Support
+    url: https://github.com/olivierlacan/keep-a-changelog/discussions
+  - type: ChangeLog
+    url: https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md
+  - type: ChangeLog
+    url: changelog/changelog-md-changelog.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: LLMsTxt
+    url: llms/changelog-md-llms.txt
+  - type: Packages
+    url: packages/changelog-md-packages.yml
+  - type: Conformance
+    url: conformance/changelog-md-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/changelog-md-lifecycle.yml
+  - type: Conventions
+    url: conventions/changelog-md-conventions.yml
+  - type: Plans
+    url: plans/changelog-md-plans-pricing.yml
   - type: RelatedSpecification
     url: https://semver.org/
-  - type: TermsOfService
-    url: https://keepachangelog.com/en/1.1.0/
   - type: License
-    url: https://creativecommons.org/licenses/by/4.0/
+    url: https://github.com/olivierlacan/keep-a-changelog/blob/main/LICENSE
   - name: Features
     type: Features
     data:
@@ -143,3 +163,8 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-05'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v3

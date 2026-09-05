@@ -1,0 +1,116 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://keepachangelog.com/en/2.0.0/ and
+  https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md — each entry's
+  evidence names the exact location that states the claim.
+note: >-
+  Keep a Changelog publishes NO API, so the API-shaped conformance families in this
+  vocabulary (oauth2, oidc, rfc9457, json:api, odata, pagination, idempotency, fapi,
+  scim, psd2, fhir) are not applicable rather than failed — there is no contract for
+  them to apply to, and an n/a leaves the denominator. What the project DOES declare are
+  the format standards its own convention composes with, recorded below.
+
+subject: The Keep a Changelog specification, version 2.0.0 (2026-06-07)
+
+conformance:
+  - id: semver
+    name: Semantic Versioning 2.0.0
+    conforms: true
+    relationship: recommends-and-adheres
+    evidence: https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md
+    detail: >-
+      The spec's own example changelog — which is the project's real CHANGELOG.md,
+      rendered inline on the spec page — carries the line "this project adheres to
+      [Semantic Versioning](https://semver.org/spec/v2.0.0.html)". Every released version
+      of the specification itself (0.0.1 through 2.0.0) is a SemVer triple, and the
+      2.0.0 release is labelled a major revision precisely because it carries breaking
+      changes to the guidance.
+
+  - id: iso8601
+    name: ISO 8601 calendar dates
+    conforms: true
+    relationship: mandates
+    evidence: https://keepachangelog.com/en/2.0.0/
+    detail: >-
+      The format requires each release be dated YYYY-MM-DD. The 2.0.0 release notes
+      confirm the requirement survived the major revision unchanged ("the six change
+      types, `YYYY-MM-DD` dates, and the `Unreleased` and `[YANKED]` markers are all
+      unchanged"). The project links the ISO 8601 reference from its own links.json.
+
+  - id: markdown
+    name: Markdown (GitHub Flavored / CommonMark superset)
+    conforms: true
+    relationship: assumes
+    evidence: https://keepachangelog.com/en/2.0.0/
+    detail: >-
+      The convention is defined over a Markdown file named CHANGELOG.md at the root of a
+      project — headings for versions, third-level headings for the six change types,
+      bullet lists for entries, and reference links for version compare diffs. No
+      Markdown flavor is named normatively; the reference-link and compare-diff guidance
+      added in 2.0.0 assumes ordinary CommonMark reference-link syntax.
+
+  - id: conventional-commits
+    name: Conventional Commits
+    conforms: partial
+    relationship: discusses
+    evidence: https://keepachangelog.com/en/2.0.0/
+    detail: >-
+      2.0.0 added automation guidance covering Conventional Commits alongside CI/CD and
+      LLM-drafted changelogs. This is guidance on how a project may derive a changelog,
+      not a requirement of the format — recorded as partial to avoid overstating it.
+
+  - id: wcag-2.1-aa
+    name: WCAG 2.1 Level AA
+    conforms: true
+    relationship: self-declared
+    scope: the keepachangelog.com website, not the specification
+    evidence: https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md
+    detail: >-
+      The 2.0.0 entry records "A redesigned, accessible site (WCAG 2.1 AA) with light and
+      dark themes." This is the project's own statement about its site; no third-party
+      audit or VPAT is published, and none was found.
+
+domain_standard:
+  applicable: true
+  role: is-the-standard
+  id: keep-a-changelog
+  name: Keep a Changelog
+  detail: >-
+    Keep a Changelog is not a consumer of a domain standard for software-release
+    documentation — it IS that standard, and the dominant one. The signature this
+    catalog would look for in someone else's contract is the string
+    "https://keepachangelog.com/en/<version>/" in a project's CHANGELOG.md preamble;
+    here the signature is the definition. Its six change types (Added, Changed,
+    Deprecated, Removed, Fixed, Security), YYYY-MM-DD dates, Unreleased section and
+    [YANKED] marker are the vocabulary other tools parse against, and the 2.0.0 release
+    states explicitly that "why the six change types don't grow" is now documented — the
+    vocabulary is deliberately closed.
+  evidence: https://keepachangelog.com/en/2.0.0/
+  adoption_signals:
+    - 6692 GitHub stars on the reference repository (probed 2026-09-05)
+    - 28 community-maintained language translations published on the site
+    - Six independent parser implementations across npm, PyPI, RubyGems, crates.io and Go
+  reward_only_note: >-
+    Recorded under domain_standard because the check is reward-only and this is a real,
+    contract-level signature. No compliance program, certification or audit is claimed
+    for it, and none exists.
+
+not_applicable:
+  reason: no-api-surface
+  detail: >-
+    keepachangelog.com is a static Middleman site on GitHub Pages with, in the project's
+    own words, "No backend." There is no request/response contract, so the following
+    have no subject to be measured against.
+  families:
+    - oauth2
+    - oidc
+    - rfc9457
+    - json:api
+    - odata
+    - pagination
+    - idempotency
+    - fapi
+    - scim
+    - psd2
+    - fhir

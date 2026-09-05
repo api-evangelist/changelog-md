@@ -1,0 +1,108 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  Registry metadata endpoints queried unauthenticated on 2026-09-05 — registry.npmjs.org,
+  pypi.org/pypi/<pkg>/json, rubygems.org/api/v1/gems/<pkg>.json, crates.io/api/v1/crates,
+  proxy.golang.org — plus the project's own repository and links.json.
+note: >-
+  NO PACKAGE HERE IS FIRST-PARTY. Keep a Changelog publishes a specification, not
+  software: the project states plainly in its own AGENTS.md that "we do not create or
+  endorse specific tools", and the 2.0.0 release REMOVED the one tool reference the spec
+  used to carry (the Vandamme gem). Every entry below is a third-party implementation of
+  the format, recorded for currency evidence only. official is false on all of them, and
+  no SDKs pointer is wired into apis.yml, because there is no first-party client library
+  to point at.
+official_package_count: 0
+package_count: 6
+
+packages:
+  - name: keep-a-changelog
+    registry: npm
+    url: https://www.npmjs.com/package/keep-a-changelog
+    repository: https://github.com/oscarotero/keep-a-changelog
+    author: Oscar Otero
+    official: false
+    language: javascript
+    role: parser + writer + CLI for Keep a Changelog files
+    version: 3.1.0
+    published: '2026-08-03'
+    note: The most actively maintained implementation found; released one month before this probe.
+
+  - name: changelog-parser
+    registry: npm
+    url: https://www.npmjs.com/package/changelog-parser
+    repository: https://github.com/ungoldman/changelog-parser
+    author: Nate Goldman
+    official: false
+    language: javascript
+    role: parses a Keep a Changelog-style markdown changelog into JSON
+    version: 4.1.0
+    published: '2026-06-17'
+
+  - name: keepachangelog
+    registry: pypi
+    url: https://pypi.org/project/keepachangelog/
+    repository: https://github.com/Colin-b/keepachangelog
+    author: Colin Bounouar
+    official: false
+    language: python
+    role: parse and update a Keep a Changelog file; release helper
+    version: 2.0.0
+    published: '2024-06-14'
+
+  - name: keep-a-changelog
+    registry: crates.io
+    url: https://crates.io/crates/keep-a-changelog
+    repository: https://github.com/napalmpapalam/keep-a-changelog-rs
+    official: false
+    language: rust
+    role: Rust parser/serializer for the format
+    version: 0.1.4
+    published: '2024-07-10'
+
+  - name: keepachangelog
+    registry: rubygems
+    url: https://rubygems.org/gems/keepachangelog
+    author: Basalt AB
+    official: false
+    language: ruby
+    role: parses keepachangelog.com-style changelogs and dumps them to JSON or YAML
+    version: 0.6.1
+    published: '2018-03-06'
+    note: >-
+      Last released 2018 — more than seven years before this probe and two spec revisions
+      behind (1.1.0 in 2019, 2.0.0 in 2026). Treat as unmaintained.
+
+  - name: github.com/anton-yurchenko/go-changelog
+    registry: go
+    url: https://pkg.go.dev/github.com/anton-yurchenko/go-changelog
+    repository: https://github.com/anton-yurchenko/go-changelog
+    official: false
+    language: go
+    role: Go parser for Keep a Changelog files
+    version: v1.1.0
+    published: '2023-07-09'
+
+retired:
+  - name: vandamme
+    registry: rubygems
+    url: https://rubygems.org/gems/vandamme
+    repository: https://github.com/tech-angels/vandamme/
+    author: Philippe Lafoucrière
+    official: false
+    language: ruby
+    version: 0.0.12
+    published: '2017-03-30'
+    note: >-
+      Was named on the spec page through 1.1.x and explicitly REMOVED in 2.0.0
+      ("Outdated specifics (the Vandamme gem reference ...) in favor of more general
+      guidance"). Last release 2017-03-30. Listed here only to record that the reference
+      was retired, not that the tool is recommended.
+
+currency_finding: >-
+  Of six current implementations, two shipped within the last three months and three have
+  not been released since 2024 or earlier; none has been updated to reflect the 2.0.0
+  guidance revision of 2026-06-07. Because the 2.0.0 release explicitly did NOT change
+  the format — the six change types, the date format, Unreleased and [YANKED] are all
+  unchanged — an older parser is not necessarily broken, which is the one case in this
+  catalog where a stale package date is not by itself an abandonment signal.

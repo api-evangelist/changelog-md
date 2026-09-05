@@ -1,0 +1,36 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Direct unauthenticated GET of the five canonical /.well-known/ discovery paths against
+  every host this record knows. Keep a Changelog is a static Middleman site served from
+  GitHub Pages (stated in the project's own AGENTS.md: "No backend. The site is static
+  HTML, built once and served from GitHub Pages"), and it publishes no API, so no
+  discovery document is expected. Recorded as an honest absence.
+note: >-
+  Every path returned 404 with the site's standard HTML 404 page on both hosts. No
+  WellKnown or SecurityTxt pointer is wired into apis.yml, because nothing is served.
+hosts:
+  - host: keepachangelog.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: www.keepachangelog.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
