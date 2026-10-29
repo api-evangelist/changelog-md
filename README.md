@@ -1,4 +1,4 @@
-# CHANGELOG.md / Keep a Changelog (changelog-md)
+# CHANGELOG.md (Keep a Changelog)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,58 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CHANGELOG.md is a community convention for a human-readable, Markdown-formatted file at the root of a project that records notable changes between versions. The leading specification is "Keep a Changelog" by Olivier Lacan, which defines a stable, opinionated set of section headings (Added, Changed, Deprecated, Removed, Fixed, Security) and recommends pairing with Semantic Versioning (SemVer). The format is widely adopted across open source and enterprise projects as the de facto way to document API and software releases in a way that is readable by humans and parseable by tooling.
+CHANGELOG.md is a community convention for a human-readable, Markdown- formatted file at the root of a project that records notable changes between versions. The leading specification is "Keep a Changelog" by Olivier Lacan, which defines a stable, opinionated set of section headings (Added, Changed, Deprecated, Removed, Fixed, Security) and recommends pairing with Semantic Versioning (SemVer). The format is widely adopted across open source and enterprise projects as the de facto way to document API and software releases in a way that is readable by humans and parseable by tooling.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/changelog-md/refs/heads/main/apis.yml)
+**Areas:** Changelog · Change Tracking · Documentation · Markdown · Open Source · Release Management · Semantic Versioning · Software Releases · Versioning
 
-## Scope
+## CHANGELOG.md (Keep a Changelog) on APIs.io
 
-- **Type:** Index
-- **Position:** Producer
-- **Access:** Open Source
-- **x-type:** standard
+Everything profiled for CHANGELOG.md (Keep a Changelog) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/changelog-md/](https://apis.io/providers/changelog-md/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Change Log, Change Tracking, Documentation, Markdown, Open Source, Release Management, Semantic Versioning, Software Releases, Versioning
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-04-23
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Changelog Md Domain Security](https://apis.io/security/changelog-md/changelog-md-domain-security/)
 
-CHANGELOG.md is a file format specification rather than a network API, so there are no runtime endpoints to document. Tooling and parsers work against the Markdown file directly.
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Changelog Md Plans Pricing](https://apis.io/plans/changelog-md/changelog-md-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://keepachangelog.com/)
-- [Specification 1.1.0](https://keepachangelog.com/en/1.1.0/)
-- [Legacy Specification 1.0.0](https://keepachangelog.com/en/1.0.0/)
-- [Documentation](https://keepachangelog.com/en/1.1.0/)
-- [GitHub Repository](https://github.com/olivierlacan/keep-a-changelog)
-- [Related Specification: Semantic Versioning](https://semver.org/)
-- [License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- [Documentation](https://keepachangelog.com/en/2.0.0/)
+- [Support](https://github.com/olivierlacan/keep-a-changelog/discussions)
+- [Changelog](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
 
-## Features
+## API Evangelist rating
 
-Markdown-Formatted, Human-Readable, Machine-Parseable, Semantic Sections, Semantic Versioning Alignment, Date-Stamped Releases, Unreleased Section, Added Section, Changed Section, Deprecated Section, Removed Section, Fixed Section, Security Section, Reverse Chronological Order, Release Comparison Links
+**Kin Score 13.4** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 0.0 |
 
-Open Source Project Release Notes, API Change Documentation, SDK Release Notes, Package Manager Metadata, Library Deprecation Tracking, Security Disclosure, Automated Release Tooling, Monorepo Component Changelogs, Regulatory / Compliance Change Records
+**Agent readiness 3.6** — human-only
 
-## Tools
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-keep-a-changelog gem, changelog-from-commits, changelog-parser (npm), git-changelog, conventional-changelog, release-please, changesets, towncrier
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-## Related Standards
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/changelog-md/](https://apis.io/providers/changelog-md/).
 
-Semantic Versioning (SemVer), Conventional Commits, CommonMark, GitHub Flavored Markdown, SPDX
+## How this profile is made
 
-## Maintainers
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-**FN:** Kin Lane
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CHANGELOG.md (Keep a Changelog): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-**Email:** kin@apievangelist.com
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/changelog-md/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
